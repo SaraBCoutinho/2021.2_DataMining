@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.6 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -A -c 4
+Relation:     data-post-processed-weka.filters.unsupervised.attribute.Remove-R2,4-5
+Instances:    163306
+Attributes:   17
+              REGIAO
+              SEXO
+              TURNO
+              DESEMPENHO
+              ESTADO_CIVIL
+              RACA
+              ESCOLARIDADE_PAI
+              ESCOLARIDADE_MAE
+              MORA_SOZINHO
+              TRABALHA
+              RECEBEU_AUXILIO_PERMANENCIA
+              RECEBEU_BOLSA_ACADEMICA
+              EXTERIOR
+              INCLUSAO_SOCIAL
+              LIVROS
+              HORAS_EXTRAS
+              IDIOMA_ESTRANGEIRO
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.3 (48992 instances)
+Minimum metric <confidence>: 0.6
+Number of cycles performed: 14
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 25
+
+Size of set of large itemsets L(2): 117
+
+Size of set of large itemsets L(3): 276
+
+Size of set of large itemsets L(4): 353
+
+Size of set of large itemsets L(5): 233
+
+Size of set of large itemsets L(6): 76
+
+Size of set of large itemsets L(7): 9
+
+Best rules found:
+
+ 1. ESTADO_CIVIL=Solteiro ESCOLARIDADE_PAI=Escola ESCOLARIDADE_MAE=Superior TRABALHA=Não HORAS_EXTRAS=Sim 79448 ==> DESEMPENHO=Alto 50268    conf:(0.63)
+ 2. ESTADO_CIVIL=Solteiro ESCOLARIDADE_PAI=Escola TRABALHA=Não HORAS_EXTRAS=Sim 79877 ==> DESEMPENHO=Alto 50436    conf:(0.63)
+ 3. TURNO=Integral TRABALHA=Não 77895 ==> DESEMPENHO=Alto 49106    conf:(0.63)
+ 4. ESTADO_CIVIL=Solteiro ESCOLARIDADE_PAI=Escola ESCOLARIDADE_MAE=Superior TRABALHA=Não 81183 ==> DESEMPENHO=Alto 51054    conf:(0.63)
+ 5. ESTADO_CIVIL=Solteiro ESCOLARIDADE_MAE=Superior TRABALHA=Não HORAS_EXTRAS=Sim 81300 ==> DESEMPENHO=Alto 51104    conf:(0.63)
+ 6. ESTADO_CIVIL=Solteiro ESCOLARIDADE_PAI=Escola TRABALHA=Não 81624 ==> DESEMPENHO=Alto 51224    conf:(0.63)
+ 7. RECEBEU_AUXILIO_PERMANENCIA=Não RECEBEU_BOLSA_ACADEMICA=Não EXTERIOR=Não IDIOMA_ESTRANGEIRO=Não 78948 ==> DESEMPENHO=Baixo 49520    conf:(0.63)
+ 8. ESTADO_CIVIL=Solteiro TRABALHA=Não HORAS_EXTRAS=Sim 82100 ==> DESEMPENHO=Alto 51406    conf:(0.63)
+ 9. ESTADO_CIVIL=Solteiro ESCOLARIDADE_MAE=Superior TRABALHA=Não 83066 ==> DESEMPENHO=Alto 51900    conf:(0.62)
+10. ESTADO_CIVIL=Solteiro TRABALHA=Não 83910 ==> DESEMPENHO=Alto 52208    conf:(0.62)
+
